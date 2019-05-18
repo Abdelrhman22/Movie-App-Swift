@@ -39,7 +39,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         self.trailers = []
         titleLabel.text = myMovie.title
         yearLabel.text = myMovie.releaseDate
-        rateLabel.text = String( myMovie.voteAverage ) + " /10"
+        rateLabel.text = String( myMovie.voteAverage ) + " / 10"
         posterImageView.sd_setImage(with: URL(string: myMovie.fullUrl), placeholderImage: UIImage(named: "placeholder.jpg"))
         overviewLabel.text = myMovie.overview
 
@@ -85,7 +85,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         case reviewTable:
             return 200.0
         case trailerTable:
-            return 200.0
+            return 100.0
         default:
             return 50.0
         }
