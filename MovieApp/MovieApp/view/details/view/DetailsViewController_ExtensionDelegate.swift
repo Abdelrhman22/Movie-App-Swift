@@ -17,12 +17,7 @@ extension MovieDetailsViewController: DetailsDelegate
         DispatchQueue.main.async{
             self.view.reloadInputViews()
         }
-     /*  for i in 0..<reviews.count
-        {
-            print(reviews[i].author)
-            print(reviews[i].content)
-            print("----------------------------")
-        }*/
+     
     }
     func setTrailers(trailerArr: Array<Trailer>) {
        self.trailers = trailerArr
@@ -30,14 +25,7 @@ extension MovieDetailsViewController: DetailsDelegate
         DispatchQueue.main.async{
             self.view.reloadInputViews()
         }
-        /*
-        print("Trailers Count in DetailsDelegate \(trailers.count)")
-        for i in 0..<trailers.count
-        {
-            print(trailers[i].name)
-            print(trailers[i].key)
-        }
-         */
+     
     }
     
     

@@ -26,7 +26,6 @@ class NetworkConnection : NetworkProtocol{
     func setDelegate(delegate: HomePresenter)
     {
         self.homePresenter = delegate
-       // print("inside NetworkConnection setDelegate")
     }
     func setDelegate(delegate: DetailsPresenter) {
         self.detailsPresenter = delegate
@@ -35,7 +34,6 @@ class NetworkConnection : NetworkProtocol{
     
     func fetchMostPopular(url: String) {
         movies = []
-        print("inside fetchMostPopular Network")
         Alamofire.request(url).responseJSON { (responseData) -> Void in
             if((responseData.result.value) != nil)
             {
@@ -43,7 +41,6 @@ class NetworkConnection : NetworkProtocol{
                 if let resData = swiftyJsonVar["results"].arrayObject
                 {
                     self.arrRes = resData as! [[String:AnyObject]]
-                    //print(self.arrRes)
                     for index in 0..<self.arrRes.count{
                         let dict = self.arrRes[index]
                         let movieObject = Movie()
@@ -67,10 +64,7 @@ class NetworkConnection : NetworkProtocol{
                         let trailerURL = "https://api.themoviedb.org/3/movie/\(movieId)/videos?api_key=dc9a86621980e480855fa9b593c738e7"
                         movieObject.trailerURL = trailerURL
                         movieObject.voteAverage = (dict[APIMovie.voteAverage.rawValue] as? NSNumber)?.floatValue ?? 0
-                        //self.dataLayer.printMovie(movie: movieObject)
                         self.movies.append(movieObject)
-                        //let saveStatus = self.dataLayer.insertMovie(movie: movieObject)
-                        //print("saveStatus\(saveStatus)")
                     }
                 }
                 else
@@ -82,14 +76,12 @@ class NetworkConnection : NetworkProtocol{
             {
                 print("responseData is nil")
             }
-           // print(self.movies.count)
             if self.movies.count > 0
             {
                 self.homePresenter?.successPopularMovies(PopularArr: self.movies)
             }
             else
             {
-                print("movies count 0")
                 self.homePresenter?.failurePopularMovies()
             }
         } // end of Alamofire.request
@@ -113,7 +105,6 @@ class NetworkConnection : NetworkProtocol{
                         reviewObject.content = (dictReview["content"] as? String)!
                         self.reviews.append(reviewObject)
                     }
-                    print("Reviews Count +++ \(self.reviews.count)")
                     self.detailsPresenter?.setReviews(reviewArr: self.reviews)
                 }
             }
@@ -137,7 +128,6 @@ class NetworkConnection : NetworkProtocol{
                         trailerObject.key = (dictReview["key"] as? String)!
                         self.trailers.append(trailerObject)
                     }
-                    print("Trailers Count  +++ \(self.trailers.count)")
                     self.detailsPresenter?.setTrailers(trailerArr: self.trailers)
                 }
             }

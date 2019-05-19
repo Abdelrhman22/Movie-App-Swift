@@ -57,7 +57,6 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       // print("inside cell***//////////////////////")
         let cell : UITableViewCell = UITableViewCell()
         switch tableView {
         case reviewTable:
@@ -105,29 +104,11 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         default:
             return 50.0
         }
-       // return UITableViewAutomaticDimension;
     }
     override func viewWillAppear(_ animated: Bool) {
         
-        print("viewWillAppear count \(reviews.count)")
-        print("viewWillAppear count \(trailers.count)")
         DispatchQueue.main.async{
-//            for i in 0..<self.trailers.count
-//            {
-//                print("Key === \(self.trailers[i].key)")
-//            }
-            /*
-             for index in 0..<self.reviews.count
-             {
-             print("jfdalsdfbgalsiubf \(self.reviews.count)")
-             print(self.reviews[index].author)
-             print(self.reviews[index].content)
-             print("-----------------------------")
-             // var str = self.reviews[index].author
-             //str.append("\n\(self.reviews[index].content)")
-             // self.reviewTextView.text = self.reviews[index].author + self.reviews[index].content
-             }
-             */
+
             self.view.reloadInputViews()
         }
     }
@@ -145,11 +126,10 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         
     }
     @IBAction func addToFavourite(_ sender: UIButton) {
-        //print("Button Fav Clicked")
         let ismovieExist = self.detailsPresenter.isMovieExists(id: myMovie.id)
         if ismovieExist
         {
-            print("This Movie Already in Favouroties")
+           
 
             let alertController = UIAlertController(title: "\(myMovie.title)", message: "This Movie Already Exists , Do you Want to remove it ?", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
@@ -159,7 +139,6 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
                 UIAlertAction in
-                print("Cancel Button Pressed")
             }
             alertController.addAction(okAction)
             alertController.addAction(cancelAction)
@@ -179,12 +158,10 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     }
     func setre(reviewArr: Array<Review>) {
         self.reviews = reviewArr
-      //  print("Review Count \(self.reviews.count)")
         reviewTable.reloadData()
     }
     func setTrai(trailerArr: Array<Trailer>) {
         self.trailers = trailerArr
-     //   print("Trailer Count \(self.trailers.count)")
         trailerTable.reloadData()
     }
 }

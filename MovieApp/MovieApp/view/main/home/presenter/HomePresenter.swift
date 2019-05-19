@@ -13,8 +13,6 @@ class HomePresenter{
     var homeDelegate: HomeDelegate?
     
     init() {
-        //self.connection?.setDelegate(delegate: self)
-       // print("inSide HomePresenter init")
         connection = NetworkConnection()
     }
     func setDelegate(delegate: HomeDelegate){
@@ -33,7 +31,6 @@ class HomePresenter{
     
     func setURL(URL : String) {
         connection?.fetchMostPopular(url: URL)
-       // print("URL is\(URL)")
     }
     
     

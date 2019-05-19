@@ -9,7 +9,6 @@
 import Foundation
 protocol NetworkProtocol {
     func fetchMostPopular(url : String) ;
-    //func fetchTopRated(url : String) -> Array<Movie> ;
     func setDelegate(delegate: HomePresenter);
     func setDelegate(delegate: DetailsPresenter);
     func getReviews(url : String)
