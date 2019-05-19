@@ -9,8 +9,8 @@
 import UIKit
 
 class TrailerTableViewCell: UITableViewCell {
-    @IBOutlet weak var trailerLabel: UILabel!
     
+    @IBOutlet weak var trailerLabel: UILabel!
     @IBOutlet weak var trailerImageView: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
