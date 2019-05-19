@@ -30,11 +30,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     override func viewDidLoad()
     {
         super.viewDidLoad()
-//        reviewTable.delegate = self
-//        reviewTable.dataSource = self
-//        trailerTable.delegate = self
-//        trailerTable.dataSource = self
-//
+
         self.reviews = []
         self.trailers = []
         titleLabel.text = myMovie.title
@@ -78,6 +74,22 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
             print("")
         }
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch tableView {
+        case trailerTable:
+            do {
+            let key = self.trailers[indexPath.row].key
+            if let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(key)")
+            {
+                print("\(youtubeURL)")
+                UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+            }
+        }
+        default:
+           print("Error Occuered")
+        }
+        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
