@@ -79,16 +79,15 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         case trailerTable:
             do {
                 let key = self.trailers[indexPath.row].key
-                if let youtubeURL = URL(string: "youtube://\(key)"),
-                    UIApplication.shared.canOpenURL(youtubeURL)
+                var url = NSURL(string:"youtube://\(key)")!
+                if UIApplication.shared.canOpenURL(url as URL)
                 {
-                    // redirect to app
-                    UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+                    UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
                 }
-                else if let youtubeURL = URL(string: "https://www.youtube.com/watch?v=\(key)")
+                else
                 {
-                    // redirect through safari
-                    UIApplication.shared.open(youtubeURL, options: [:], completionHandler: nil)
+                    url = NSURL(string:"http://www.youtube.com/watch?v=\(key)")!
+                    UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
                 }
             }
         default:
