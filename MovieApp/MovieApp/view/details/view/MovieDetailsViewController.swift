@@ -94,7 +94,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         case reviewTable:
             return 200.0
         case trailerTable:
-            return 80.0
+            return 100.0
         default:
             return 50.0
         }
@@ -143,10 +143,31 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         if ismovieExist
         {
             print("This Movie Already in Favouroties")
+
+            let alertController = UIAlertController(title: "\(myMovie.title)", message: "This Movie Already Exists , Do you Want to remove it ?", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) {
+                UIAlertAction in
+                let deleteStatus = self.dataLayer.deleteMovie(id: self.myMovie.id)
+                print("\(deleteStatus)")
+            }
+            let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
+                UIAlertAction in
+                print("Cancel Button Pressed")
+            }
+            alertController.addAction(okAction)
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
         }
         else{
             let addStatus = dataLayer.insertMovie(movie: myMovie)
             print("Movie added Status \(addStatus)")
+            let alertController = UIAlertController(title: "\(myMovie.title)", message: "Added Successfully", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+            {
+                UIAlertAction in
+            }
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
         }
     }
     func setre(reviewArr: Array<Review>) {
