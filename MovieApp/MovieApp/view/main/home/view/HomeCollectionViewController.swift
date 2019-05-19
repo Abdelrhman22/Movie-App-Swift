@@ -14,7 +14,20 @@ private let reuseIdentifier = "homeCollectionCell"
 
 class HomeCollectionViewController: UICollectionViewController , UICollectionViewDelegateFlowLayout {
     
-  var counter = 1
+    @IBAction func switchMovies(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex
+        {
+        case 0:
+            print("MostPopular")
+           self.homePresenter.setURL(URL: self.url)
+        case 1:
+             print("HighRated")
+            self.homePresenter.setURL(URL: self.urlTopRated)
+        default:
+            break
+        }
+    }
+    var counter = 1
     var movies : [Movie]! = [];
     let url : String = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=dc9a86621980e480855fa9b593c738e7"
     let urlTopRated : String = "https://api.themoviedb.org/3/discover/movie?sort_by=top_rated.desc&api_key=dc9a86621980e480855fa9b593c738e7"
@@ -28,32 +41,7 @@ class HomeCollectionViewController: UICollectionViewController , UICollectionVie
     override func viewWillAppear(_ animated: Bool)
     {
     }
-    @IBAction func topRatedBtn(_ sender: UIBarButtonItem!) {
-        if counter % 2 != 0
-        {
-        
-        self.homePresenter.setURL(URL: self.urlTopRated)
-        counter  = counter + 1
-           
-            //sender.setTitle("Most Popular", for: UIControlState.normal)
-           
 
-
-        }
-        else if counter % 2 == 0
-        {
-            self.homePresenter.setURL(URL: self.url)
-            counter  = counter + 1
-          
-            //sender.setTitle("Top Rated", for: UIControlState.normal)
-            
-
-
-        }
-        
-        
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
