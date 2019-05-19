@@ -27,6 +27,8 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         
         trailerTable.delegate = self
         trailerTable.dataSource = self
+       
+
         
         self.reviews = []
         self.trailers = []
@@ -131,7 +133,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     func setMovie(movieObj : Movie)
     {
         myMovie = movieObj
-        self.detailsPresenter.setDelegate(delegate: self)
+        self.detailsPresenter.setDelegate(delegate: self , dataLayer: dataLayer)
         self.detailsPresenter.getReviews(url: self.myMovie.reviewURL)
         self.detailsPresenter.getTrailers(url: self.myMovie.trailerURL)
     
@@ -139,7 +141,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     }
     @IBAction func addToFavourite(_ sender: UIButton) {
         //print("Button Fav Clicked")
-        let ismovieExist = dataLayer.isMovieExists(id: myMovie.id)
+        let ismovieExist = self.detailsPresenter.isMovieExists(id: myMovie.id)
         if ismovieExist
         {
             print("This Movie Already in Favouroties")

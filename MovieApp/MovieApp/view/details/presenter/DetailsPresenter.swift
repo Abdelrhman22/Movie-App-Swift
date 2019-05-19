@@ -10,14 +10,16 @@ import Foundation
 class DetailsPresenter{
     var detailsDelegate : DetailsDelegate?
     var connection: NetworkProtocol?
+    var dataLayer : DataLayer?
     var MovieReviews : String = ""
     init()
     {
         connection = NetworkConnection()
     }
-    func setDelegate(delegate: DetailsDelegate)
+    func setDelegate(delegate: DetailsDelegate , dataLayer: DataLayer)
     {
         self.detailsDelegate = delegate
+        self.dataLayer = dataLayer
         self.connection?.setDelegate(delegate: self)
     }
     func getReviews(url : String) {
@@ -31,5 +33,9 @@ class DetailsPresenter{
     }
     func setTrailers(trailerArr : Array<Trailer>) {
        detailsDelegate?.setTrailers(trailerArr: trailerArr)
+    }
+    func isMovieExists(id : Int) -> Bool {
+        return (dataLayer?.isMovieExists(id: id))!
+       
     }
 }

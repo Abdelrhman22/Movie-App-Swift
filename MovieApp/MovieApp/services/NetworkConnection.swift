@@ -50,8 +50,15 @@ class NetworkConnection : NetworkProtocol{
                         let movieId = dict[APIMovie.id.rawValue] as! Int
                         movieObject.id = movieId
                         let imgUrl = dict[APIMovie.posterPath.rawValue] as? String
-                        let fullUrl = "https://image.tmdb.org/t/p/w185/"+imgUrl!
-                        movieObject.fullUrl = fullUrl
+                        if let fullUrl = imgUrl
+                        {
+                            
+                            movieObject.fullUrl = "https://image.tmdb.org/t/p/w185/" + fullUrl
+                        }
+                        else{
+                            movieObject.fullUrl = "https://silverspaceship.com/static/shot_1_thumb.png"
+                        }
+                        
                         movieObject.title = (dict[APIMovie.title.rawValue] as? String)!
                         movieObject.overview = (dict[APIMovie.overview.rawValue]as? String)!
                         movieObject.releaseDate = (dict[APIMovie.releaseDate.rawValue]as? String)!
