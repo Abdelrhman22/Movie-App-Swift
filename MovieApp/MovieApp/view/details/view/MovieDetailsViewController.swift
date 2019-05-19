@@ -101,6 +101,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
         default:
             return 50.0
         }
+         return UITableViewAutomaticDimension;
     }
     override func viewWillAppear(_ animated: Bool) {
         

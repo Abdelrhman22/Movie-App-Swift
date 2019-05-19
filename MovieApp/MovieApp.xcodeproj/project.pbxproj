@@ -14,6 +14,8 @@
 		1E8584F02289772100ED1E10 /* dawn.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1E8584EF2289772100ED1E10 /* dawn.jpg */; };
 		1E8584F32289773700ED1E10 /* dragon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1E8584F12289773700ED1E10 /* dragon.jpg */; };
 		1E8584F42289773700ED1E10 /* mach.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1E8584F22289773700ED1E10 /* mach.jpg */; };
+		1E9A9F6522915A070056C5E4 /* preLoader.json in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A9F6422915A070056C5E4 /* preLoader.json */; };
+		1E9A9F6822915B680056C5E4 /* launcer.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E9A9F6722915B680056C5E4 /* launcer.png */; };
 		1EC06B33228C071F0023B14B /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EC06B32228C071F0023B14B /* Review.swift */; };
 		1EE71C26228C988100147AF8 /* Trailer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EE71C25228C988100147AF8 /* Trailer.swift */; };
 		A7775D082289B0B2009A7D60 /* HomeCollectionViewController_ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7775D072289B0B2009A7D60 /* HomeCollectionViewController_ExtensionDelegate.swift */; };
@@ -53,6 +55,8 @@
 		1E8584EF2289772100ED1E10 /* dawn.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dawn.jpg; sourceTree = "<group>"; };
 		1E8584F12289773700ED1E10 /* dragon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dragon.jpg; sourceTree = "<group>"; };
 		1E8584F22289773700ED1E10 /* mach.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mach.jpg; sourceTree = "<group>"; };
+		1E9A9F6422915A070056C5E4 /* preLoader.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = preLoader.json; sourceTree = "<group>"; };
+		1E9A9F6722915B680056C5E4 /* launcer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launcer.png; sourceTree = "<group>"; };
 		1EC06B32228C071F0023B14B /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		1EE71C25228C988100147AF8 /* Trailer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trailer.swift; sourceTree = "<group>"; };
 		3D4CEEE495E78E4CCCAFC74A /* Pods-MovieApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-MovieApp/Pods-MovieApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		1E8584EE228976BC00ED1E10 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1E9A9F6722915B680056C5E4 /* launcer.png */,
 				1E7301AA228D51BA00885753 /* youtube.png */,
 				A78871CC228B47C4006EDD2D /* fav.png */,
 				1E8584F12289773700ED1E10 /* dragon.jpg */,
@@ -121,6 +126,14 @@
 				BA69F61622871D6500952D02 /* placeholder.jpg */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		1E9A9F6622915B200056C5E4 /* animation */ = {
+			isa = PBXGroup;
+			children = (
+				1E9A9F6422915A070056C5E4 /* preLoader.json */,
+			);
+			path = animation;
 			sourceTree = "<group>";
 		};
 		6E65262B23EECA55A1CFA073 /* Pods */ = {
@@ -283,6 +296,7 @@
 		BA182722228704FF005A16D6 /* screens */ = {
 			isa = PBXGroup;
 			children = (
+				1E9A9F6622915B200056C5E4 /* animation */,
 				A7775D052289B075009A7D60 /* main */,
 				A7775D042289B05A009A7D60 /* details */,
 			);
@@ -386,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E9A9F6522915A070056C5E4 /* preLoader.json in Resources */,
 				1E7301AB228D51BA00885753 /* youtube.png in Resources */,
 				BAEC10302285F05500C0D721 /* LaunchScreen.storyboard in Resources */,
 				1E8584F02289772100ED1E10 /* dawn.jpg in Resources */,
@@ -395,6 +410,7 @@
 				1E8584F32289773700ED1E10 /* dragon.jpg in Resources */,
 				BAEC10282285F00800C0D721 /* Main.storyboard in Resources */,
 				A78871CD228B47C4006EDD2D /* fav.png in Resources */,
+				1E9A9F6822915B680056C5E4 /* launcer.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
