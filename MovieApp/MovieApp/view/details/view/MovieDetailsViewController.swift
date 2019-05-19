@@ -98,9 +98,9 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch tableView {
         case reviewTable:
-            return 200.0
+            return 250.0
         case trailerTable:
-            return 100.0
+            return 80.0
         default:
             return 50.0
         }
