@@ -11,9 +11,9 @@ IOS Movie App Using Swift 4.0
 * user rating
 * release date
 ## ScrenShots
-### Splash Screen
+Splash Screen
 ![01](https://user-images.githubusercontent.com/12870894/57984577-74b3d300-7a5d-11e9-95de-45d11f20ced1.png)
-### Launch application with Most Popular
+Launch application with Most Popular
 ![02](https://user-images.githubusercontent.com/12870894/57984579-754c6980-7a5d-11e9-9164-ae40c36076b4.png)
 ![03](https://user-images.githubusercontent.com/12870894/57984580-754c6980-7a5d-11e9-8443-cc06c8012186.png)
 ![04](https://user-images.githubusercontent.com/12870894/57984581-75e50000-7a5d-11e9-9bb2-743f0baa77d9.png)
