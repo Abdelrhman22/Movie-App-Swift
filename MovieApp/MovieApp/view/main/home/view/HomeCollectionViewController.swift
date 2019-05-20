@@ -37,13 +37,7 @@ class HomeCollectionViewController: UICollectionViewController , UICollectionVie
         homePresenter.setDelegate(delegate: self)
         self.homePresenter.setURL(URL: self.url)
     }
-    override func viewWillAppear(_ animated: Bool)
-    {
-        if movies.count <= 0
-        {
-            errorInternetConnection()
-        }
-    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
