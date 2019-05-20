@@ -330,6 +330,15 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWY-gR-F0O">
+                                                <rect key="frame" x="321" y="180" width="46" height="46"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <state key="normal" image="unfillstar.png"/>
+                                                <connections>
+                                                    <action selector="addToFavourite:" destination="V6X-tf-GLh" eventType="touchUpInside" id="3l2-KK-3Cl"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -405,6 +414,7 @@
                         <outlet property="posterImageView" destination="TEX-SM-JWB" id="dP7-WO-TBZ"/>
                         <outlet property="rateLabel" destination="yQx-V5-O3Y" id="d9t-nC-3Wu"/>
                         <outlet property="reviewTable" destination="GDM-co-qhO" id="Gso-VF-aTD"/>
+                        <outlet property="starButton" destination="xWY-gR-F0O" id="oT2-qd-ple"/>
                         <outlet property="titleLabel" destination="7t0-94-egR" id="NeF-5X-qSC"/>
                         <outlet property="trailerTable" destination="JGQ-Ih-KD4" id="FDz-v6-U4L"/>
                         <outlet property="yearLabel" destination="IrI-6b-fMo" id="p6h-UJ-fhg"/>
@@ -473,6 +483,7 @@
     </scenes>
     <resources>
         <image name="fav.png" width="128" height="128"/>
+        <image name="unfillstar.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mbK-kv-hdc"/>

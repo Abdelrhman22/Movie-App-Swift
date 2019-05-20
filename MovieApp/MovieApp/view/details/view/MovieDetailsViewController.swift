@@ -7,6 +7,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     @IBOutlet weak var reviewTable: UITableView!
     @IBOutlet weak var trailerTable: UITableView!
     
+    @IBOutlet weak var starButton: UIButton!
     @IBOutlet var overviewLabel: UILabel!
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var rateLabel: UILabel!
@@ -133,6 +134,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     
         
     }
+    
     @IBAction func addToFavourite(_ sender: UIButton) {
         let ismovieExist = self.detailsPresenter.isMovieExists(id: myMovie.id)
         if ismovieExist
@@ -144,6 +146,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
                 UIAlertAction in
                 let deleteStatus = self.dataLayer.deleteMovie(id: self.myMovie.id)
                 print("\(deleteStatus)")
+                 self.starButton.setBackgroundImage(UIImage(named: "unfillstar.png"), for: UIControlState.normal)
             }
             let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel) {
                 UIAlertAction in
@@ -159,6 +162,7 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
             let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
             {
                 UIAlertAction in
+                self.starButton.setBackgroundImage(UIImage(named: "fillstar.png"), for: UIControlState.normal)
             }
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
