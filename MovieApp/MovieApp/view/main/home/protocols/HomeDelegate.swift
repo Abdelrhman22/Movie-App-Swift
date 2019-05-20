@@ -9,7 +9,8 @@
 import Foundation
 protocol HomeDelegate{
     func setPopularMovies(popularArr : Array<Movie>);
-    func errorPopularMovies();
+    func errorPopularMovies()
+    func errorInternetConnection()
     
     
     

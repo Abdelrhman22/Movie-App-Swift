@@ -39,6 +39,10 @@ class HomeCollectionViewController: UICollectionViewController , UICollectionVie
     }
     override func viewWillAppear(_ animated: Bool)
     {
+        if movies.count <= 0
+        {
+            errorInternetConnection()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -75,6 +79,16 @@ class HomeCollectionViewController: UICollectionViewController , UICollectionVie
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         destinationVC.setMovie(movieObj: movies[indexPath.row]);
+    }
+    func errorInternetConnection() {
+        let alertController = UIAlertController(title: "Internet Connection failed", message: "Please enable internet", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default)
+        {
+            UIAlertAction in
+        }
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+        
     }
   
 

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 extension HomeCollectionViewController: HomeDelegate
 {
     func setPopularMovies(popularArr: Array<Movie>) {
@@ -17,7 +18,7 @@ extension HomeCollectionViewController: HomeDelegate
     }
     
     func errorPopularMovies() {
-        print("Error in HomeCollectionViewController")
+    self.errorInternetConnection()
     }
     
     
