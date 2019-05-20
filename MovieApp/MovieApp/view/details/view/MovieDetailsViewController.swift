@@ -98,12 +98,20 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch tableView {
         case reviewTable:
-            return 250.0
+            return heightForCell(text: reviews[indexPath.row].content , width: self.view.frame.width - 20 )
         case trailerTable:
             return 80.0
         default:
             return 50.0
         }
+    }
+    func heightForCell(text : String , width : CGFloat)->CGFloat{
+        let label:UILabel = UILabel(frame: CGRect(origin: CGPoint(x : 0 , y : 0), size: CGSize( width : width , height : CGFloat.greatestFiniteMagnitude)))
+        label.numberOfLines = 0
+        label.lineBreakMode = NSLineBreakMode.byWordWrapping
+        label.text = text
+        label.sizeToFit()
+        return label.frame.height
     }
     override func viewWillAppear(_ animated: Bool) {
         
