@@ -10,17 +10,13 @@ IOS Movie App Using Swift 4.0
 * a plot synopsis
 * user rating
 * release date
-## ScrenShots
-### Splash Screen
-![01](https://user-images.githubusercontent.com/12870894/57984577-74b3d300-7a5d-11e9-95de-45d11f20ced1.png)
-### Launch application with Most Popular
-![02](https://user-images.githubusercontent.com/12870894/57984579-754c6980-7a5d-11e9-9164-ae40c36076b4.png)
-### High Rated Movies
-![03](https://user-images.githubusercontent.com/12870894/57984580-754c6980-7a5d-11e9-8443-cc06c8012186.png)
-### Add Movie To favourite form Details
-![04](https://user-images.githubusercontent.com/12870894/57984581-75e50000-7a5d-11e9-9bb2-743f0baa77d9.png)
-### Remove Movie From Favourites
-![05](https://user-images.githubusercontent.com/12870894/57984582-75e50000-7a5d-11e9-89d6-e336487542bb.png)
-### Show  Saved Favourite Movies
-![06](https://user-images.githubusercontent.com/12870894/57984669-674b1880-7a5e-11e9-9784-9c9cd2cc427f.png)
+![01](https://user-images.githubusercontent.com/12870894/58020934-e8131e80-7b09-11e9-9ee6-6c13ae1137a7.png)
+![02](https://user-images.githubusercontent.com/12870894/58020935-e8abb500-7b09-11e9-97f9-cb2e46de5f8c.png)
+![03](https://user-images.githubusercontent.com/12870894/58020937-e9444b80-7b09-11e9-9481-558c79c53a26.png)
+![04](https://user-images.githubusercontent.com/12870894/58020944-eb0e0f00-7b09-11e9-90fd-e61ffb91e7bb.png)
+![05](https://user-images.githubusercontent.com/12870894/58020945-eb0e0f00-7b09-11e9-8552-b627de1cda0b.png)
+![06](https://user-images.githubusercontent.com/12870894/58020948-eba6a580-7b09-11e9-8259-944df13c39d2.png)
+![07](https://user-images.githubusercontent.com/12870894/58020950-ecd7d280-7b09-11e9-8986-0b388737b48f.png)
+![08](https://user-images.githubusercontent.com/12870894/58020952-ecd7d280-7b09-11e9-91ec-cdeb1382b617.png)
+
 
