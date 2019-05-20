@@ -23,9 +23,15 @@ class MovieDetailsViewController: UIViewController , UITableViewDelegate , UITab
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let ismovieExist = self.detailsPresenter.isMovieExists(id: myMovie.id)
+        if ismovieExist{
+            self.starButton.setBackgroundImage(UIImage(named: "fillstar.png"), for: UIControlState.normal)
+        }
+        
+        
         reviewTable.delegate = self
         reviewTable.dataSource = self
-        
+
         trailerTable.delegate = self
         trailerTable.dataSource = self
        

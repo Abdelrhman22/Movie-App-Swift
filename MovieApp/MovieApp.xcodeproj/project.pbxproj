@@ -31,6 +31,7 @@
 		A7775D1F2289B43C009A7D60 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7775D1E2289B43C009A7D60 /* DetailsPresenter.swift */; };
 		A7775D222289B50E009A7D60 /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7775D212289B50E009A7D60 /* NetworkConnection.swift */; };
 		A7775D252289B7B5009A7D60 /* NetworkProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7775D242289B7B5009A7D60 /* NetworkProtocol.swift */; };
+		A77AF4652292C7FD00FA46BC /* SplashScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77AF4642292C7FD00FA46BC /* SplashScreenViewController.swift */; };
 		A7875F47228C671A003094C8 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7875F46228C671A003094C8 /* TableViewCell.swift */; };
 		A78871CD228B47C4006EDD2D /* fav.png in Resources */ = {isa = PBXBuildFile; fileRef = A78871CC228B47C4006EDD2D /* fav.png */; };
 		BA18271722863058005A16D6 /* APIEnums.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA18271622863058005A16D6 /* APIEnums.swift */; };
@@ -43,7 +44,6 @@
 		BA69F61722871D6500952D02 /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA69F61622871D6500952D02 /* placeholder.jpg */; };
 		BA69F619228748E100952D02 /* MovieDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA69F618228748E100952D02 /* MovieDetailsViewController.swift */; };
 		BAEC10232285F00800C0D721 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEC10222285F00800C0D721 /* AppDelegate.swift */; };
-		BAEC10252285F00800C0D721 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAEC10242285F00800C0D721 /* ViewController.swift */; };
 		BAEC10282285F00800C0D721 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAEC10262285F00800C0D721 /* Main.storyboard */; };
 		BAEC102B2285F00800C0D721 /* MovieApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAEC10292285F00800C0D721 /* MovieApp.xcdatamodeld */; };
 		BAEC102D2285F05500C0D721 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAEC102C2285F05500C0D721 /* Assets.xcassets */; };
@@ -76,6 +76,7 @@
 		A7775D1E2289B43C009A7D60 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
 		A7775D212289B50E009A7D60 /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
 		A7775D242289B7B5009A7D60 /* NetworkProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProtocol.swift; sourceTree = "<group>"; };
+		A77AF4642292C7FD00FA46BC /* SplashScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenViewController.swift; sourceTree = "<group>"; };
 		A7875F46228C671A003094C8 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		A78871CC228B47C4006EDD2D /* fav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fav.png; sourceTree = "<group>"; };
 		BA18271622863058005A16D6 /* APIEnums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEnums.swift; sourceTree = "<group>"; };
@@ -89,7 +90,6 @@
 		BA69F618228748E100952D02 /* MovieDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailsViewController.swift; sourceTree = "<group>"; };
 		BAEC101F2285F00800C0D721 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAEC10222285F00800C0D721 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BAEC10242285F00800C0D721 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BAEC10272285F00800C0D721 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAEC102A2285F00800C0D721 /* MovieApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieApp.xcdatamodel; sourceTree = "<group>"; };
 		BAEC102C2285F05500C0D721 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -278,6 +278,23 @@
 			path = services;
 			sourceTree = "<group>";
 		};
+		A77AF4662292C84700FA46BC /* splash */ = {
+			isa = PBXGroup;
+			children = (
+				1E9A9F6622915B200056C5E4 /* animation */,
+				A77AF4672292C9C100FA46BC /* view */,
+			);
+			path = splash;
+			sourceTree = "<group>";
+		};
+		A77AF4672292C9C100FA46BC /* view */ = {
+			isa = PBXGroup;
+			children = (
+				A77AF4642292C7FD00FA46BC /* SplashScreenViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
 		BA1827182286306D005A16D6 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -302,9 +319,9 @@
 		BA182722228704FF005A16D6 /* screens */ = {
 			isa = PBXGroup;
 			children = (
-				1E9A9F6622915B200056C5E4 /* animation */,
 				A7775D052289B075009A7D60 /* main */,
 				A7775D042289B05A009A7D60 /* details */,
+				A77AF4662292C84700FA46BC /* splash */,
 			);
 			name = screens;
 			path = view;
@@ -333,7 +350,6 @@
 			children = (
 				1E8584EE228976BC00ED1E10 /* images */,
 				BAEC10222285F00800C0D721 /* AppDelegate.swift */,
-				BAEC10242285F00800C0D721 /* ViewController.swift */,
 				BAEC10262285F00800C0D721 /* Main.storyboard */,
 				BAEC102C2285F05500C0D721 /* Assets.xcassets */,
 				BAEC102E2285F05500C0D721 /* LaunchScreen.storyboard */,
@@ -476,11 +492,11 @@
 			files = (
 				BA18271E22863F77005A16D6 /* Movie.swift in Sources */,
 				1E7301A9228D44C100885753 /* TrailerTableViewCell.swift in Sources */,
+				A77AF4652292C7FD00FA46BC /* SplashScreenViewController.swift in Sources */,
 				BA18271A22863750005A16D6 /* EntitiesEnums.swift in Sources */,
 				A7775D122289B25E009A7D60 /* FavouriteDelegate.swift in Sources */,
 				BA18271C22863B15005A16D6 /* DataLayer.swift in Sources */,
 				BA1827242287052D005A16D6 /* FavouritesCollectionViewController.swift in Sources */,
-				BAEC10252285F00800C0D721 /* ViewController.swift in Sources */,
 				A7775D0A2289B0E7009A7D60 /* HomeDelegate.swift in Sources */,
 				1EC06B33228C071F0023B14B /* Review.swift in Sources */,
 				A7775D1F2289B43C009A7D60 /* DetailsPresenter.swift in Sources */,

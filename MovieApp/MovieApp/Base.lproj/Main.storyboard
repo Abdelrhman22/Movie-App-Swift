@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Splash Screen View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SplashScreenViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,13 +179,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TEX-SM-JWB">
-                                                <rect key="frame" x="16" y="62" width="258" height="164"/>
+                                                <rect key="frame" x="16" y="62" width="264" height="164"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="164" id="ZJK-Z1-fvM"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IrI-6b-fMo">
-                                                <rect key="frame" x="290" y="78" width="108" height="25"/>
+                                                <rect key="frame" x="296" y="78" width="102" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="ohn-ZE-hp9"/>
                                                 </constraints>
@@ -194,7 +194,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQx-V5-O3Y">
-                                                <rect key="frame" x="290" y="135" width="108" height="25"/>
+                                                <rect key="frame" x="296" y="135" width="102" height="25"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="25" id="gha-63-3fL"/>
                                                 </constraints>
@@ -330,10 +330,13 @@
                                                     </tableViewCell>
                                                 </prototypes>
                                             </tableView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWY-gR-F0O">
-                                                <rect key="frame" x="321" y="180" width="46" height="46"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xWY-gR-F0O">
+                                                <rect key="frame" x="327" y="180" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="1rU-kI-kVV"/>
+                                                    <constraint firstAttribute="width" constant="40" id="AzP-ld-raO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="2"/>
                                                 <state key="normal" image="unfillstar.png"/>
                                                 <connections>
                                                     <action selector="addToFavourite:" destination="V6X-tf-GLh" eventType="touchUpInside" id="3l2-KK-3Cl"/>
@@ -351,11 +354,13 @@
                                             <constraint firstAttribute="trailing" secondItem="GDM-co-qhO" secondAttribute="trailing" constant="16" id="EEE-OV-z5I"/>
                                             <constraint firstAttribute="trailing" secondItem="yQx-V5-O3Y" secondAttribute="trailing" constant="16" id="G8y-Q5-piw"/>
                                             <constraint firstItem="7t0-94-egR" firstAttribute="top" secondItem="owz-8r-uvs" secondAttribute="top" constant="16" id="H9W-EW-xgh"/>
+                                            <constraint firstItem="xWY-gR-F0O" firstAttribute="leading" secondItem="TEX-SM-JWB" secondAttribute="trailing" constant="47" id="JnP-1U-Ibm"/>
                                             <constraint firstItem="Bo3-8z-2YB" firstAttribute="top" secondItem="L2m-aj-8Nv" secondAttribute="bottom" constant="40" id="NJn-Ij-mZk"/>
                                             <constraint firstItem="JGQ-Ih-KD4" firstAttribute="top" secondItem="IEe-bv-qBb" secondAttribute="bottom" constant="16" id="OjL-nd-M8s"/>
                                             <constraint firstItem="IEe-bv-qBb" firstAttribute="leading" secondItem="owz-8r-uvs" secondAttribute="leading" constant="16" id="Ue0-LY-nmB"/>
                                             <constraint firstAttribute="height" constant="1000" id="V2V-c9-X97"/>
                                             <constraint firstAttribute="trailing" secondItem="7t0-94-egR" secondAttribute="trailing" constant="16" id="aVt-8y-ibg"/>
+                                            <constraint firstAttribute="trailing" secondItem="xWY-gR-F0O" secondAttribute="trailing" constant="47" id="c6P-yI-fnz"/>
                                             <constraint firstItem="Bo3-8z-2YB" firstAttribute="leading" secondItem="owz-8r-uvs" secondAttribute="leading" constant="16" id="cO3-wU-yuo"/>
                                             <constraint firstItem="L2m-aj-8Nv" firstAttribute="top" secondItem="Bgc-tj-Mzt" secondAttribute="bottom" constant="32" id="d7z-Cm-dgb"/>
                                             <constraint firstItem="IEe-bv-qBb" firstAttribute="top" secondItem="GDM-co-qhO" secondAttribute="bottom" constant="32" id="dLp-9A-Yqx"/>
@@ -364,9 +369,9 @@
                                             <constraint firstItem="7t0-94-egR" firstAttribute="leading" secondItem="owz-8r-uvs" secondAttribute="leading" constant="16" id="jYp-Ez-fEA"/>
                                             <constraint firstItem="L2m-aj-8Nv" firstAttribute="leading" secondItem="owz-8r-uvs" secondAttribute="leading" constant="16" id="kKm-OE-1Wa"/>
                                             <constraint firstAttribute="trailing" secondItem="JGQ-Ih-KD4" secondAttribute="trailing" constant="16" id="lyO-Ds-Qyw"/>
-                                            <constraint firstAttribute="trailing" secondItem="TEX-SM-JWB" secondAttribute="trailing" constant="140" id="pAY-bT-JqI"/>
                                             <constraint firstAttribute="trailing" secondItem="Bgc-tj-Mzt" secondAttribute="trailing" constant="16" id="q9K-tO-OYa"/>
                                             <constraint firstAttribute="trailing" secondItem="IEe-bv-qBb" secondAttribute="trailing" constant="16" id="qFQ-dc-JPP"/>
+                                            <constraint firstItem="xWY-gR-F0O" firstAttribute="top" secondItem="yQx-V5-O3Y" secondAttribute="bottom" constant="20" id="sPS-65-whf"/>
                                             <constraint firstItem="IrI-6b-fMo" firstAttribute="top" secondItem="7t0-94-egR" secondAttribute="bottom" constant="32" id="u2a-o6-AI3"/>
                                             <constraint firstItem="TEX-SM-JWB" firstAttribute="leading" secondItem="owz-8r-uvs" secondAttribute="leading" constant="16" id="vDg-T4-pvf"/>
                                             <constraint firstItem="GDM-co-qhO" firstAttribute="top" secondItem="Bo3-8z-2YB" secondAttribute="bottom" constant="16" id="wIJ-ab-EKY"/>
@@ -394,20 +399,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bTK-JN-R6K"/>
                     </view>
-                    <navigationItem key="navigationItem" id="hct-Eu-fXB">
-                        <barButtonItem key="rightBarButtonItem" image="fav.png" style="plain" id="uBx-ji-18W">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kxm-pC-T5m">
-                                <rect key="frame" x="264" y="7" width="130" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add To Favourite">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addToFavourite:" destination="V6X-tf-GLh" eventType="touchUpInside" id="8tV-bH-FzU"/>
-                                </connections>
-                            </button>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="hct-Eu-fXB"/>
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="overviewLabel" destination="L2m-aj-8Nv" id="zFE-ys-oNC"/>
@@ -482,7 +474,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="fav.png" width="128" height="128"/>
         <image name="unfillstar.png" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
