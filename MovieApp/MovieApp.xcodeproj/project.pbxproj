@@ -272,8 +272,8 @@
 		A7775D232289B52F009A7D60 /* services */ = {
 			isa = PBXGroup;
 			children = (
-				A7775D212289B50E009A7D60 /* NetworkConnection.swift */,
-				A7775D242289B7B5009A7D60 /* NetworkProtocol.swift */,
+				A789EB1B2295CD84007E0178 /* coreData */,
+				A789EB1A2295CD4E007E0178 /* network */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -295,6 +295,23 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		A789EB1A2295CD4E007E0178 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				A7775D212289B50E009A7D60 /* NetworkConnection.swift */,
+				A7775D242289B7B5009A7D60 /* NetworkProtocol.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		A789EB1B2295CD84007E0178 /* coreData */ = {
+			isa = PBXGroup;
+			children = (
+				BA18271B22863B15005A16D6 /* DataLayer.swift */,
+			);
+			path = coreData;
+			sourceTree = "<group>";
+		};
 		BA1827182286306D005A16D6 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,7 +325,6 @@
 			isa = PBXGroup;
 			children = (
 				BA1827182286306D005A16D6 /* Enums */,
-				BA18271B22863B15005A16D6 /* DataLayer.swift */,
 				BA18271D22863F77005A16D6 /* Movie.swift */,
 				1EC06B32228C071F0023B14B /* Review.swift */,
 				1EE71C25228C988100147AF8 /* Trailer.swift */,
